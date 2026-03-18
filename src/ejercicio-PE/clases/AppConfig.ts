@@ -5,7 +5,7 @@ import { IAppConfig } from "../interfaces/IAppConfig.js";
  */
 export class AppConfig implements IAppConfig{
     private static appConfig: AppConfig;
-    public record: Map<string, string>;
+    private record: Map<string, string>;
 
     /**
      * Constructor de AppCOnfig
