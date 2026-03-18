@@ -46,7 +46,10 @@ export class AppConfig implements IAppConfig{
      * @returns - una copia de todo el mapa de claves-valor
      */
     public getAll(): Map<string, string> {
-        let copy: Map<string, string> = this.record;
+        const copy: Map<string, string> = new Map();
+        this.record.forEach((value, key) => {
+            copy.set(key, value);
+        });
         return copy;
     }
 
